@@ -1,0 +1,40 @@
+/* ===== ADMIN STOCK CHART ===== */
+.adminStockPage {
+  padding: 32px 40px;
+  min-height: calc(100vh - 64px);
+  animation: fadeIn 0.5s ease-out;
+}
+
+.adminStockChart {
+  background: var(--bg-glass);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--shadow-card);
+  min-height: 500px;
+}
+
+/* Inherits ApexCharts overrides from StockChart.css */
+.adminStockChart .apexcharts-canvas {
+  background: transparent !important;
+}
+.adminStockChart .apexcharts-text,
+.adminStockChart .apexcharts-title-text {
+  fill: var(--text-secondary) !important;
+  font-family: 'Inter', sans-serif !important;
+}
+.adminStockChart .apexcharts-gridline {
+  stroke: var(--border-primary) !important;
+}
+.adminStockChart .apexcharts-tooltip {
+  background: var(--bg-secondary) !important;
+  border: 1px solid var(--border-accent) !important;
+  color: var(--text-primary) !important;
+  border-radius: var(--radius-sm) !important;
+}
+
+@media (max-width: 768px) {
+  .adminStockPage {
+    padding: 20px 16px;
+  }
+}

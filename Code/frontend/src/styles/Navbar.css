@@ -1,0 +1,82 @@
+/* ===== NAVBAR ===== */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  height: 64px;
+  background: rgba(10, 14, 23, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-primary);
+}
+
+.navbar h3 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  cursor: pointer;
+  letter-spacing: -0.5px;
+}
+
+.nav-options {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-options ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-options ul li a,
+.nav-options p {
+  position: relative;
+  padding: 8px 18px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: color var(--transition-fast);
+  margin: 0;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+}
+
+.nav-options ul li a:hover,
+.nav-options p:hover {
+  color: var(--text-primary);
+  background: var(--bg-glass-hover);
+}
+
+/* Logout special style */
+.nav-options p:last-child {
+  color: var(--color-danger);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+.nav-options p:last-child:hover {
+  background: rgba(239, 68, 68, 0.1);
+  border-color: rgba(239, 68, 68, 0.4);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 16px;
+  }
+  .nav-options ul li a,
+  .nav-options p {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+}

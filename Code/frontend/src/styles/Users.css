@@ -1,0 +1,63 @@
+/* ===== USERS PAGE ===== */
+.all-users-page {
+  padding: 32px 40px;
+  min-height: calc(100vh - 64px);
+  animation: fadeIn 0.5s ease-out;
+}
+
+.all-users-page h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.all-users {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 16px;
+}
+
+.user {
+  padding: 20px 24px;
+  background: var(--bg-glass);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-smooth);
+  animation: fadeInUp 0.4s ease-out backwards;
+}
+
+.user:hover {
+  background: var(--bg-glass-hover);
+  border-color: var(--border-accent);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-float);
+}
+
+.user p {
+  font-size: 0.88rem;
+  color: var(--text-primary);
+  margin: 6px 0;
+  word-break: break-all;
+}
+
+.user p b {
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  letter-spacing: 0.5px;
+  margin-right: 8px;
+}
+
+@media (max-width: 768px) {
+  .all-users-page {
+    padding: 20px 16px;
+  }
+  .all-users {
+    grid-template-columns: 1fr;
+  }
+}

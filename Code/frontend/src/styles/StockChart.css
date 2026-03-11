@@ -1,0 +1,112 @@
+/* ===== STOCK CHART PAGE ===== */
+.stockPage {
+  display: flex;
+  gap: 24px;
+  padding: 32px 40px;
+  min-height: calc(100vh - 64px);
+  animation: fadeIn 0.5s ease-out;
+}
+
+.stockChart {
+  flex: 2;
+  background: var(--bg-glass);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--shadow-card);
+  min-height: 420px;
+}
+
+/* ApexCharts dark theme overrides */
+.stockChart .apexcharts-canvas {
+  background: transparent !important;
+}
+.stockChart .apexcharts-text,
+.stockChart .apexcharts-title-text {
+  fill: var(--text-secondary) !important;
+  font-family: 'Inter', sans-serif !important;
+}
+.stockChart .apexcharts-gridline {
+  stroke: var(--border-primary) !important;
+}
+.stockChart .apexcharts-xaxis-tick,
+.stockChart .apexcharts-yaxis-tick {
+  stroke: var(--border-primary) !important;
+}
+.stockChart .apexcharts-tooltip {
+  background: var(--bg-secondary) !important;
+  border: 1px solid var(--border-accent) !important;
+  color: var(--text-primary) !important;
+  border-radius: var(--radius-sm) !important;
+}
+
+/* ===== ACTIONS PANEL ===== */
+.stockChartActions {
+  flex: 1;
+  background: var(--bg-glass);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  height: fit-content;
+}
+
+.stockChartActions-head {
+  display: flex;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+.stockChartActions-head button {
+  flex: 1;
+  padding: 14px 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.button-active {
+  background: var(--gradient-primary) !important;
+  color: #fff !important;
+}
+
+.button-inactive {
+  background: transparent;
+  color: var(--text-secondary);
+}
+.button-inactive:hover {
+  background: var(--bg-glass-hover);
+  color: var(--text-primary);
+}
+
+.stockChartActions-body {
+  padding: 24px;
+}
+
+.stockChartActions-body form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.stockChartActions-body .mb-3 {
+  margin-bottom: 0 !important;
+}
+
+.stockChartActions-body .btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 900px) {
+  .stockPage {
+    flex-direction: column;
+    padding: 20px 16px;
+  }
+  .stockChart {
+    min-height: 300px;
+  }
+}

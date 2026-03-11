@@ -1,0 +1,201 @@
+/* ===== PROFILE PAGE ===== */
+.profilePage {
+  padding: 32px 40px;
+  min-height: calc(100vh - 64px);
+  max-width: 900px;
+  margin: 0 auto;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.profilePage > h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ===== PROFILE BOX ===== */
+.profileBox {
+  background: var(--bg-glass);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: 32px;
+  box-shadow: var(--shadow-card);
+}
+
+.profileBox-head {
+  padding: 20px 28px;
+  background: var(--gradient-primary);
+}
+
+.profileBox-head p {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+}
+
+.profileBox-body {
+  padding: 24px 28px;
+}
+
+.profileBox-body > span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.profileBox-body > span p {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.profileBox-body > span h6 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-success);
+  margin: 0;
+}
+
+/* ===== CASH ACTION BUTTONS ===== */
+.cash-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.cash-actions button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 20px;
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-sm);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.cash-actions-active {
+  background: var(--gradient-primary) !important;
+  border-color: var(--accent-primary) !important;
+  color: #fff !important;
+  box-shadow: 0 4px 16px var(--accent-glow);
+}
+
+.cash-actions-inactive {
+  background: transparent;
+  color: var(--text-secondary);
+  border-color: var(--border-primary);
+}
+.cash-actions-inactive:hover {
+  background: var(--bg-glass-hover);
+  color: var(--text-primary);
+  border-color: var(--border-accent);
+}
+
+.cash-action-icons {
+  font-size: 1.1rem;
+}
+
+/* ===== PROFILE FUNDS ===== */
+.ProfileFunds {
+  background: var(--bg-glass);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  box-shadow: var(--shadow-card);
+  animation: fadeInUp 0.4s ease-out;
+}
+
+.ProfileFunds h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.ProfileFunds form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ProfileFunds form .mb-3 {
+  margin-bottom: 0 !important;
+}
+
+.ProfileFunds .btn {
+  align-self: flex-start;
+  padding: 10px 32px;
+}
+
+/* ===== PROFILE TRANSACTIONS ===== */
+.profileTransactions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.profileTransaction {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-smooth);
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.profileTransaction:hover {
+  border-color: var(--border-accent);
+  transform: translateY(-1px);
+}
+
+.profileTransaction span {
+  display: flex;
+  flex-direction: column;
+}
+
+.profileTransaction span h6 {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.profileTransaction span p {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .profilePage {
+    padding: 20px 16px;
+  }
+  .cash-actions {
+    flex-direction: column;
+  }
+  .profileTransaction {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

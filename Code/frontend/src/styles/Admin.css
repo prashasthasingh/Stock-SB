@@ -1,0 +1,15 @@
+/* ===== ADMIN PAGE ===== */
+.adminPage {
+  padding: 32px 40px;
+  min-height: calc(100vh - 64px);
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Admin inherits all of Home's styles for trending & all-stocks */
+/* Just need to set the admin-specific text if any */
+
+@media (max-width: 768px) {
+  .adminPage {
+    padding: 20px 16px;
+  }
+}
